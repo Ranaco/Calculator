@@ -21,8 +21,14 @@ class _CalcState extends State<Calc> {
     print(operand);
   }
 
-  var current = "";
-  var history = "";
+  onClick() {
+    setState(() {
+      press += current;
+    });
+  }
+
+  static var current = "";
+  static var history = "";
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +39,7 @@ class _CalcState extends State<Calc> {
         Column(
           children: <Widget>[
             SizedBox(
-              height: 220,
+              height: 200,
             ),
             Container(
               padding: EdgeInsets.fromLTRB(250, 0, 0, 0),
@@ -50,8 +56,7 @@ class _CalcState extends State<Calc> {
             ),
             Container(
               padding: EdgeInsets.fromLTRB(250, 0, 0, 0),
-              child: Text(
-                current,
+              child: TextField(
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 40,
@@ -140,53 +145,110 @@ class _CalcState extends State<Calc> {
             Row(
               children: <Widget>[
                 Padding(padding: EdgeInsets.fromLTRB(40, 5, 0, 0)),
-                TextButton(
-                  onPressed: () {
-                    _pressedButton(7);
-                  },
-                  child: Text(
-                    '7',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _pressedButton(7);
+                    },
+                    child: Text(
+                      '7',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
                 ),
-                TextButton(
-                  onPressed: () {
-                    _pressedButton(8);
-                  },
-                  child: Text(
-                    '8',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _pressedButton(8);
+                    },
+                    child: Text(
+                      '8',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
                 ),
-                TextButton(
-                  onPressed: () {
-                    _pressedButton(9);
-                  },
-                  child: Text(
-                    '9',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _pressedButton(9);
+                    },
+                    child: Text(
+                      '9',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
@@ -214,53 +276,110 @@ class _CalcState extends State<Calc> {
             Row(
               children: <Widget>[
                 Padding(padding: EdgeInsets.fromLTRB(40, 5, 0, 0)),
-                TextButton(
-                  onPressed: () {
-                    _pressedButton(4);
-                  },
-                  child: Text(
-                    '4',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _pressedButton(4);
+                    },
+                    child: Text(
+                      '4',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
                 ),
-                TextButton(
-                  onPressed: () {
-                    _pressedButton(5);
-                  },
-                  child: Text(
-                    '5',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _pressedButton(5);
+                    },
+                    child: Text(
+                      '5',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
                 ),
-                TextButton(
-                  onPressed: () {
-                    _pressedButton(6);
-                  },
-                  child: Text(
-                    '6',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _pressedButton(6);
+                    },
+                    child: Text(
+                      '6',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
@@ -288,53 +407,110 @@ class _CalcState extends State<Calc> {
             Row(
               children: <Widget>[
                 Padding(padding: EdgeInsets.fromLTRB(40, 5, 0, 0)),
-                TextButton(
-                  onPressed: () {
-                    _pressedButton(1);
-                  },
-                  child: Text(
-                    '1',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _pressedButton(1);
+                    },
+                    child: Text(
+                      '1',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
                 ),
-                TextButton(
-                  onPressed: () {
-                    _pressedButton(2);
-                  },
-                  child: Text(
-                    '2',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _pressedButton(2);
+                    },
+                    child: Text(
+                      '2',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
                 ),
-                TextButton(
-                  onPressed: () {
-                    _pressedButton(3);
-                  },
-                  child: Text(
-                    '3',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _pressedButton(3);
+                    },
+                    child: Text(
+                      '3',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
@@ -362,53 +538,110 @@ class _CalcState extends State<Calc> {
             Row(
               children: <Widget>[
                 Padding(padding: EdgeInsets.fromLTRB(40, 5, 0, 0)),
-                TextButton(
-                  onPressed: () {
-                    _pressedButton('00');
-                  },
-                  child: Text(
-                    '00',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _pressedButton('00');
+                    },
+                    child: Text(
+                      '00',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
                 ),
-                TextButton(
-                  onPressed: () {
-                    _pressedButton(0);
-                  },
-                  child: Text(
-                    '0',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _pressedButton(0);
+                    },
+                    child: Text(
+                      '0',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
                 ),
-                TextButton(
-                  onPressed: () {
-                    _operandFunc('.');
-                  },
-                  child: Text(
-                    '.',
-                    style: TextStyle(
-                        color: Colors.grey.shade400,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 30),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(-3, -3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade900,
+                      ),
+                      BoxShadow(
+                        offset: Offset(3, 3),
+                        blurRadius: 15,
+                        spreadRadius: 1,
+                        color: Colors.grey.shade700,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  style: TextButton.styleFrom(
-                      shape: CircleBorder(), backgroundColor: Colors.black),
+                  child: TextButton(
+                    onPressed: () {
+                      _operandFunc('.');
+                    },
+                    child: Text(
+                      '.',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 30),
+                    ),
+                    style: TextButton.styleFrom(
+                        shape: CircleBorder(), backgroundColor: Colors.black),
+                  ),
                 ),
                 SizedBox(
                   width: 20,
